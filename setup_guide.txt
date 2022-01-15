@@ -1,0 +1,7 @@
+Sublime IDE Setup for Competitive Programming with C++ and Python
+
+color scheme: DarkNeon
+theme: Default Dark
+packages: Anaconda, Side Bar, BracketHighlighter, SublimeREPL, SublimeAStyleFormatter
+also install: Microsoft Visual C++ 2010 x64 Redistributable - 10.040219 
+(https://www.microsoft.com/en-us/download/details.aspx?id=26999)
