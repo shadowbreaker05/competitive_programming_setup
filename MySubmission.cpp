@@ -42,7 +42,7 @@ void inpV (vector<T> &vec, int end)
     vec.resize(end);
     for (int i = 0; i < end; i += one)
     {
-        cin >> vec[i] ;
+        cin >> vec[i];
     }
 }
 
@@ -81,41 +81,9 @@ void outAptr(const T array[], size_t SIZE)
 
 auto solve()
 {
-    ll dsa, toc, dm;
-    cin >> dsa >> toc >> dm;
-    ll tot = dsa + toc + dm;
-    ll dsa2, toc2, dm2;
-    cin >> dsa2 >> toc2 >> dm2;
-    ll tot2 = dsa2 + toc2 + dm2;
-    if (tot == tot2)
-    {
-        if (dsa == dsa2)
-        {
-            if (toc == toc2)
-            {
-                if (dm == dm2)
-                {
-                    cout << "TIE";
-                }
-                else
-                {
-                    cout << (dm > dm2 ? "DRAGON" : "SLOTH");
-                }
-            }
-            else
-            {
-                cout << (toc > toc2 ? "DRAGON" : "SLOTH");
-            }
-        }
-        else
-        {
-            cout << (dsa > dsa2 ? "DRAGON" : "SLOTH");
-        }
-    }
-    else
-    {
-        cout << (tot > tot2 ? "DRAGON" : "SLOTH");
-    }
+    string greet; cin >> greet; cout << greet;
+    ll size; cin >> size; vector<ll> arr;
+    inpV(arr, size); cout << endl; outV(arr);
     return "\n";
 }
 // -- solve function ends -- */
