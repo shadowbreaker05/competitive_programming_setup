@@ -152,14 +152,16 @@ def solve():
     # print(modobj.value(int(1e15)))  #setting modobj._modd from None to given param
     try:
         queries = 1
-        # queries = int(input())
+        queries = int(input())
         # s1 = "Yes"
         # s2 = "No"
         # def myFunc(e):
         #     return e % 2
         for query in range(queries):
             try:
-                print("helloworld")
+                greet = istr()
+                print(greet)
+                size = inum()
                 arr = ilist()
                 print(arr)
                 while False:
