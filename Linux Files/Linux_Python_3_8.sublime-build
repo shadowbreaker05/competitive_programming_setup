@@ -1,0 +1,8 @@
+{
+	// "cmd": ["python3", "${file}", ">", "outputf.txt"],
+	"cmd": ["python3", "-i", "-u", "$file"],
+	"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+	"shell":true,
+	"working_dir":"$file_path",
+	"selector":"source.python"
+}
