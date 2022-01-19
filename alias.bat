@@ -14,7 +14,7 @@ DOSKEY gedit = notepad $*
 DOSKEY ifconfig = ipconfig
 DOSKEY python = python3 $*
 DOSKEY sublime = sublime_text $*
-DOSKEY alias = notepad C:\Windows\thsmartkid\hello.bat
+DOSKEY alias = notepad %USERPROFILE%\hello.bat
 ::Allows us to add new entries into the alias file for CMD
 DOSKEY ~ = cd "%USERPROFILE%\$*"
 ::Direct access to the Home/CurrentUser Directory
