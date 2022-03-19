@@ -1,0 +1,10 @@
+{
+   "scope": "source.python - variable.other.python",
+
+   "completions":
+   [
+      { "trigger": "lis", "contents": "list(map(int, input().split()))\n" },
+      { "trigger": "tup", "contents": "tuple(map(int, input().split()))\n" },
+      { "trigger": "dd", "contents": "collections.defaultdict(lambda:$1)\n" } // hashmap
+   ]
+}
