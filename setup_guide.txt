@@ -7,3 +7,4 @@ c++ compiler (mingw): https://sourceforge.net/projects/mingw/files/latest/downlo
 packages: Anaconda, Side Bar, BracketHighlighter, SublimeREPL, SublimeAStyleFormatter
 also install: Microsoft Visual C++ 2010 x64 Redistributable - 10.040219 
 (https://www.microsoft.com/en-us/download/details.aspx?id=26999)
+Sublime UI : 3 columns, 2 groups
