@@ -4,7 +4,7 @@ color scheme: DarkNeon
 theme: Default Dark
 python version: 3.10.1
 c++ compiler (mingw): https://sourceforge.net/projects/mingw/files/latest/download
-packages: Anaconda, Side Bar, BracketHighlighter, SublimeREPL, SublimeAStyleFormatter, Tabnine, Terminus
+packages: Anaconda, Side Bar, BracketHighlighter, SublimeREPL, SublimeAStyleFormatter, Tabnine, Transparency, Terminus
 also install: Microsoft Visual C++ 2010 x64 Redistributable - 10.040219 
 (https://www.microsoft.com/en-us/download/details.aspx?id=26999)
 Sublime UI : 3 columns, 2 groups
