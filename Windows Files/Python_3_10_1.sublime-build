@@ -1,6 +1,6 @@
 {
 	// "cmd": ["python", "${file}", ">", "D:\\CompetitiveProgramming\\outputf.txt"],
-	"cmd": ["py", "${file}", "<", "C:\\Cyberkid\\CompetitiveProgramming\\inputf.txt", ">", "C:\\Cyberkid\\CompetitiveProgramming\\outputf.txt"],
+	"cmd": ["python", "${file}", "<", "C:\\Cyberkid\\CompetitiveProgramming\\inputf.txt", ">", "C:\\Cyberkid\\CompetitiveProgramming\\outputf.txt"],
 	"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
 	"shell":true,
 	"working_dir":"$file_path",
