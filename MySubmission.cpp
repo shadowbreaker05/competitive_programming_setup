@@ -5,111 +5,147 @@
 #pragma GCC target ("sse4")
 using namespace std;
 
-//* BOOST BEG //
 #pragma GCC optimize("Ofast")
 #pragma GCC target("avx,avx2,fma")
 #pragma GCC optimization ("unroll-loops")
 #pragma GCC target("avx,avx2,sse,sse2,sse3,sse4,popcnt")
-// BOOST END */
 
 #define FAST_IO ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
-
 #define endl "\n"
+
+// type names
 typedef long long int ll;
-const ll one = 1, zer = 0;
 typedef vector<ll> vll;
+typedef pair<ll, ll> pll;
+typedef map<ll, ll> mll;
+
+const ll one = 1, zer = 0;
+const ll modd = 1e9 + 7;     //  10^9 + 7
 #define mininfi -1000000007   //  10^9 + 7
 #define plusinfi 1000000007   //  10^9 + 7
+
+// macros
 #define all(xx) xx.begin(),xx.end()
-#define forr(i, xx, yy) for (ll i = xx; i < yy; i+=one)
+#define allrev(xx) xx.rbegin(), xx.rend()
+#define sum(xx) accumulate(all(xx), 0)
+#define forr(xx, yy) for (ll i = xx; i < yy; i += 1)
+#define setprecisionn(xx) cout << fixed << setprecision(xx)
 
-//* STRUCT & CLASS DEFINITIONS BEG //
+#define vec_max(xx) (ll)*max_element(all(xx))
+#define vec_min(xx) (ll)*min_element(all(xx))
 
-// STRUCT & CLASS DEFINITIONS END */
+auto maxll = [](ll x, ll y)   { if (x > y) return x; else return y; };
+auto minll = [](ll x, ll y)   { if (x < y) return x; else return y; };
+auto vec_sorted = [](vll xx) { vll yy(xx); sort(all(yy)); return yy; };
+auto vec_sortedrev = [](vll xx) { vll yy(xx); sort(allrev(yy)); return yy; };
+// auto vec_sortedrev = [](vll xx) { vll yy(xx); sort(all(yy), greater<int>()); return yy; };
+auto roundnum = [](double xx, ll yy) -> double { return (double)((int)(xx * pow(10, yy) + 0.5)) / pow(10, yy); };
 
-template <typename T>
-void inpA (T vec[], int end)
+template <typename T1>
+inline void inpV (vector<T1> &vec, ll num1)
 {
-    for (int i = 0; i < end; i += one)
-    {
-        cin >> vec[i];
-    }
+	vec.resize(num1);
+	forr (0, num1) cin >> vec[i];
 }
 
-template <typename T>
-void inpV (vector<T> &vec, int end)
+template <typename T1>
+inline void outV (const vector<T1> &vec)
 {
-    vec.resize(end);
-    for (int i = 0; i < end; i += one)
-    {
-        cin >> vec[i];
-    }
+	forr (0, vec.size()) cout << vec[i] << " " ; cout << "\n";
 }
 
-template <typename T, size_t SIZE>
-void outA (const T (&array)[SIZE])
-{
-    for (size_t i = 0; i < SIZE; i += one)
-    {
-        std::cout << array[i] << " ";
-    }
-    // cout << "\end";
+template<typename T1, size_t N>
+inline size_t array_size(const T1(&)[N]) {
+	return N;
 }
 
-template <typename T>
-void outV (const vector<T> &vec)
-{
-    for (int i = 0; i < vec.size(); i += one)
-    {
-        cout << vec[i] << " " ;
-    }
-    // cout << "\end";
-}
+// int solveutil() { }
 
-template <typename T>
-void outAptr(const T array[], size_t SIZE)
+string solve(ll* tc)
 {
-    /*  SIZE = sizeof(array_name) / sizeof(int)  */
-    /*  SIZE = sizeof(array) / sizeof(array[0])  */
-    for (size_t i = 0; i < SIZE; i += one)
-    {
-        cout << array[i] << " ";
-    }
-}
+	auto greet = []() { return "Hello World!"; };
 
-//* -- solve function begins -- //
 
-auto solve()
-{
-    string greet; cin >> greet; cout << greet;
-    ll size; cin >> size; vector<ll> arr;
-    inpV(arr, size); cout << endl; outV(arr);
-    return "\n";
+	if (tc) {
+		// Code Begins Here
+
+		cout << greet() << endl;
+
+		// Code Ends here
+
+		return "";
+	}
+	else {
+		return greet();
+	}
 }
-// -- solve function ends -- */
 
 int main()
 {
-    FAST_IO;
-    // cin.ignore();   // to ignore the current line in input
-    // cout.precision(9);  // precision of decimal values in cout
-
-    ll tcs = one; cin >> tcs;
-    // for (ll tc = 1; tc <= tcs; tc += 1)
-    while (tcs -- > zer)
-    {
-        // YOUR CODE HERE
-        // cout << "Hello World\end";
-        // cout << solve() << endl;
-        cout << solve();
-    }
-    return 0;
+	FAST_IO;
+	// freopen("inputf.txt", "r", stdin);
+	// freopen("outputf.txt", "w", stdout);
+	ll tcs = 1;
+	cin >> tcs;
+	string (*fptr)(ll*) = solve;
+	while (tcs -- > zer) cout << (*fptr)(&tcs);
+	return 0;
 }
 
-/* -- INPUT --
-2
-1 10
-3 5
-*/
-
 // -- by A_*_A -- //
+
+/*
+
+// ASCII VALUES
+'A' -> 65, 'Z' -> 90,
+'a' -> 96, 'z' -> 122,
+'0' -> 48, '1' -> 49, 9' -> 57
+
+// cycle back of integer values due to overflow
+INT_MAX + 1 == INT_MIN
+INT_MIN - 1 == INT_MAX
+
+// arithmetic calculations take place in higher datatype
+int a = 100000, b = 100000;
+long long int c = a * b;		// will give wrong value
+long long int c = a * 1LL * b; 	// will give right value
+
+// in a 64 bit system
+cout << sizeof(char) << endl;					// 1
+cout << sizeof(int) << endl;					// 4
+cout << sizeof(const) << endl;					// 4
+cout << sizeof(unsigned) << endl;				// 4
+cout << sizeof(signed) << endl;					// 4
+
+built in function to countsetbits in x: __builtin_popcount(x)
+
+int - to_string()
+char - isalpha(), isdigit()
+string - getline(), push_back(), pop_back(), size() or length(), stoi(), reverse(), s.substr()
+vector - push_back(), pop_back(), front(), back(), reserve(), size(), empty(), clear(), erase(), begin(), end()
+list - push_back(), pop_back(), push_front(), pop_front(), merge(), sort(), reverse(), size()
+map, set, multiset, multimap - insert(), erase(), find(), size(), count(), empty(), clear()
+bitset - size(), count(), all(), any(), none(), set(), reset(), flip(), test()
+deque - push_back(), push_front(), pop_back(), pop_front()
+stack - push(), pop(), top(), empty(), size()
+queue - push(), pop(), front(), back(), empty(), size()
+priority_queue -
+
+// accessing vector pairs using addresses
+vector<pair<int, string>> arr
+(&arr[0])->first
+(*&arr[0]).first
+
+// vector iterator
+vector - vector<int>::iterator vptr;
+
+// copy one string to another
+char * strcpy ( char * destination, const char * source );
+
+// copies the first num characters of source C string to destination C string
+char * strncpy ( char * destination, const char * source, size_t num );
+
+// Sets the first num bytes of the block of memory pointed by ptr to the specified value (interpreted as an unsigned char)
+void * memset ( void * ptr, int value, size_t num );
+
+*/
